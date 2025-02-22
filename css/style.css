@@ -1,0 +1,163 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Gaya umum */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Gaya untuk input dan tombol */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya untuk halaman survei */
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 500px) {
+    #container {
+        width: 95%;
+    }
+}
+
+
+/* Halaman Survei */
+#survey-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.survey-question {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.survey-options {
+    list-style: none;
+    padding: 0;
+}
+
+.survey-options li {
+    margin: 8px 0;
+}
+
+.survey-options input[type="radio"],
+.survey-options input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Input teks tambahan */
+.survey-other {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.survey-other input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tombol Kirim */
+#submit-survey {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#submit-survey:hover {
+    background-color: #218838;
+}
+
+/* Responsif */
+@media (max-width: 500px) {
+    #survey-container {
+        width: 95%;
+    }
+}
+
+.other-input {
+    display: none; /* Sembunyikan input awalnya */
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Jika radio button "Lainnya" dipilih, munculkan input */
+input[type="radio"]:checked + .other-input {
+    display: inline-block;
+}
