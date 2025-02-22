@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survei - NextGenius</title>
+    <link rel="stylesheet" href="/Survey/survey.css">
+</head>
+<body>
+    <div id="survey-container">
+        <h1>Survei Teknologi</h1>
+        <form id="survey-form">
+            
+            <!-- Pertanyaan 1 -->
+            <div class="survey-question">
+                <p>1. Seberapa sering kamu mengikuti perkembangan teknologi terbaru?</p>
+                <label><input type="radio" name="question-1" value="Setiap hari"> Setiap hari</label>
+                <label><input type="radio" name="question-1" value="Beberapa kali dalam seminggu"> Beberapa kali dalam seminggu</label>
+                <label><input type="radio" name="question-1" value="Beberapa kali dalam sebulan"> Beberapa kali dalam sebulan</label>
+                <label><input type="radio" name="question-1" value="Jarang"> Jarang</label>
+                <label><input type="radio" name="question-1" value="Tidak pernah"> Tidak pernah</label>
+                <label>
+                    <input type="radio" name="question-1" value="Lainnya"> Lainnya:
+                    <input type="text" id="other-1" class="other-input" placeholder="Tulis jawaban">
+                </label>
+            </div>
+
+            <!-- Pertanyaan 2 -->
+            <div class="survey-question">
+                <p>2. Teknologi mana yang paling menarik perhatianmu saat ini?</p>
+                <label><input type="radio" name="question-2" value="Kecerdasan Buatan (AI)"> Kecerdasan Buatan (AI)</label>
+                <label><input type="radio" name="question-2" value="Komputasi Kuantum"> Komputasi Kuantum</label>
+                <label><input type="radio" name="question-2" value="Blockchain & Cryptocurrency"> Blockchain & Cryptocurrency</label>
+                <label><input type="radio" name="question-2" value="Teknologi 5G & Jaringan Masa Depan"> Teknologi 5G & Jaringan Masa Depan</label>
+                <label><input type="radio" name="question-2" value="Virtual Reality (VR) & Augmented Reality (AR)"> Virtual Reality (VR) & Augmented Reality (AR)</label>
+                <label><input type="radio" name="question-2" value="Bioteknologi"> Bioteknologi</label>
+                <label>
+                    <input type="radio" name="question-2" value="Lainnya"> Lainnya:
+                    <input type="text" id="other-2" class="other-input" placeholder="Tulis jawaban">
+                </label>
+            </div>
+
+            <!-- Pertanyaan 3 -->
+            <div class="survey-question">
+                <p>3. Menurutmu, teknologi apa yang akan memberikan dampak terbesar dalam 10 tahun ke depan?</p>
+                <label><input type="radio" name="question-3" value="AI & Otomasi"> AI & Otomasi</label>
+                <label><input type="radio" name="question-3" value="Energi Terbarukan"> Energi Terbarukan</label>
+                <label><input type="radio" name="question-3" value="Mobil Listrik & Otonom"> Mobil Listrik & Otonom</label>
+                <label><input type="radio" name="question-3" value="Teknologi Ruang Angkasa"> Teknologi Ruang Angkasa</label>
+                <label><input type="radio" name="question-3" value="Internet of Things (IoT)"> Internet of Things (IoT)</label>
+                <label>
+                    <input type="radio" name="question-3" value="Lainnya"> Lainnya:
+                    <input type="text" id="other-3" class="other-input" placeholder="Tulis jawaban">
+                </label>
+            </div>
+
+            <!-- Pertanyaan 4 -->
+            <div class="survey-question">
+                <p>4. Apakah kamu percaya bahwa pekerjaan manusia akan banyak digantikan oleh robot dan AI di masa depan?</p>
+                <label><input type="radio" name="question-4" value="Ya, sebagian besar pekerjaan akan digantikan"> Ya, sebagian besar pekerjaan akan digantikan</label>
+                <label><input type="radio" name="question-4" value="Beberapa pekerjaan akan digantikan, tetapi masih banyak pekerjaan manusia"> Beberapa pekerjaan akan digantikan, tetapi masih banyak pekerjaan manusia</label>
+                <label><input type="radio" name="question-4" value="Tidak, teknologi hanya akan membantu manusia, bukan menggantikan"> Tidak, teknologi hanya akan membantu manusia, bukan menggantikan</label>
+                <label><input type="radio" name="question-4" value="Tidak tahu"> Tidak tahu</label>
+                <label>
+                    <input type="radio" name="question-4" value="Lainnya"> Lainnya:
+                    <input type="text" id="other-4" class="other-input" placeholder="Tulis jawaban">
+                </label>
+            </div>
+
+            <!-- Pertanyaan 5 -->
+            <div class="survey-question">
+                <p>5. Apa harapanmu terhadap perkembangan teknologi di masa depan?</p>
+                <textarea id="question-5" placeholder="Tulis jawabanmu di sini"></textarea>
+            </div>
+
+            <button id="submit-survey">Kirim Survei</button>
+        </form>
+    </div>
+    <script src="/Survey/survey.js"></script>
+</body>
+</html>
