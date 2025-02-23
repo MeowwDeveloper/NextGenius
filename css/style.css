@@ -1,163 +1,95 @@
-/* Reset dasar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+body{
+    background-color: rgb(19, 14, 14);
+
 }
 
-/* Gaya umum */
-body {
-    background-color: #f4f4f4;
-    color: #333;
+
+
+/* From Uiverse.io by Galahhad */ 
+/* switch settings 👇 */
+
+.ui-switch {
+    /* switch */
+    padding-left: 8px;
+    padding-top: 9px;
+    /* switch bg */
+    --switch-bg: rgb(135, 150, 165);
+    --switch-width: 48px;
+    --switch-height: 20px;
+    /* circle */
+    --circle-diameter: 32px;
+    --circle-bg: rgb(90, 90, 90);
+    --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+  }
+  
+  .ui-switch input {
+    display: none;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    background: var(--switch-bg);
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .slider .circle {
+    top: calc(var(--circle-inset) * -1);
+    left: 0;
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    position: absolute;
+    background: var(--circle-bg);
+    border-radius: inherit;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-}
-
-/* Gaya untuk input dan tombol */
-input, select, textarea {
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    ;
+  }
+  
+  .slider .circle::before {
+    content: "";
+    position: absolute;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Gaya untuk halaman survei */
-form {
-    text-align: left;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
-}
-
-textarea {
-    height: 80px;
-    resize: none;
-}
-
-/* Responsif untuk layar kecil */
-@media (max-width: 500px) {
-    #container {
-        width: 95%;
-    }
-}
-
-
-/* Halaman Survei */
-#survey-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 600px;
-    text-align: left;
-    margin-top: 20px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-.survey-question {
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.survey-options {
-    list-style: none;
-    padding: 0;
-}
-
-.survey-options li {
-    margin: 8px 0;
-}
-
-.survey-options input[type="radio"],
-.survey-options input[type="checkbox"] {
-    margin-right: 8px;
-}
-
-/* Input teks tambahan */
-.survey-other {
-    display: flex;
-    align-items: center;
-    margin-top: 8px;
-}
-
-.survey-other input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Tombol Kirim */
-#submit-survey {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-#submit-survey:hover {
-    background-color: #218838;
-}
-
-/* Responsif */
-@media (max-width: 500px) {
-    #survey-container {
-        width: 95%;
-    }
-}
-
-.other-input {
-    display: none; /* Sembunyikan input awalnya */
-    margin-left: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Jika radio button "Lainnya" dipilih, munculkan input */
-input[type="radio"]:checked + .other-input {
-    display: inline-block;
-}
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: inherit;
+    -webkit-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    opacity: 0;
+  }
+  
+  /* actions */
+  
+  .ui-switch input:checked+.slider .circle {
+    left: calc(100% - var(--circle-diameter));
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+  }
+  
+  .ui-switch input:active+.slider .circle::before {
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
